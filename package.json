@@ -1,0 +1,28 @@
+{
+  "name": "init-react-repo",
+  "version": "1.0.6",
+  "description": "Quickly create a React Component Library for publishing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Git",
+    "CLI",
+    "React",
+    "Repo",
+    "Repository"
+  ],
+  "author": "Nathan Reid",
+  "license": "MIT",
+  "bin": {
+    "init-react-repo": "./index.js"
+  },
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "clear": "0.0.1",
+    "clui": "^0.3.6",
+    "inquirer": "^5.0.1",
+    "lodash": "^4.17.11"
+  }
+}
