@@ -1,6 +1,6 @@
 # init-react-repo
 
-init-react-repo is a Node.js app too quickly initialize a React Component Repository
+init-react-repo is a Node.js app to quickly initialize a React Component Repository
 
 ## Usage
 
