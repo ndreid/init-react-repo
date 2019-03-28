@@ -1,6 +1,6 @@
 {
   "name": "init-react-repo",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Quickly create a React Component Library for publishing",
   "main": "index.js",
   "scripts": {
