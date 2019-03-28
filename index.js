@@ -20,7 +20,9 @@ const run = async () => {
     
     status.start();
 
-    if (answers.name !== files.getCurrentDirectoryBase()) {
+    let directoryBaseAlreadyCreated = answers.name === files.getCurrentDirectoryBase()
+
+    if (!directoryBaseAlreadyCreated) {
       files.createDirectorySync(answers.name)
       process.chdir(answers.name)
     }
@@ -43,12 +45,23 @@ const run = async () => {
         files.writeFile('examples/src/index.js', fileTextHelper.examples.src.indexJS)
       })
     })
+    status.stop()
+
+
+    console.log()
+    console.log(chalk.green('Successfully created repository ') + chalk.blue(answers.name))
+    console.log()
+    console.log('********************************************')
+    console.log('*  Recommended commands to run:')
+    if (!directoryBaseAlreadyCreated)
+      console.log('*      - cd "' + answers.name + '"')
+    console.log('*      - npm install')
+    console.log('*      - npm start')
+    console.log('********************************************')
   }
   catch (err) {
-    console.log(err)
-  }
-  finally {
     status.stop()
+    console.log(err)
   }
 }
 
